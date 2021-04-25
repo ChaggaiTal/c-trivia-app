@@ -28,8 +28,8 @@ body {
 }
 .wrapper {
   display: flex;
-  width: 90vmin;
-  height: 90vmin;
+  width: 95vmin;
+  height: 95vmin;
   min-height: 500px;
   padding: 50px;
   border-radius: 8px;
@@ -37,9 +37,16 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media screen and (max-width: 700px){
+    padding: 0;
+    height: 100%;
+    width: 95%;
+    min-height: 95vh;
+  }
 }
 h1 {
   font-weight: 400;
+  text-align: center;
 }
 .question {
   display: flex;
@@ -52,6 +59,9 @@ h1 {
   box-shadow: $box-shadow;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 700px){
+    height: 200px;
+  }
   &Wrap {
     display: none;
     width: 80%;
@@ -62,6 +72,9 @@ h1 {
     border-radius: 5px;
     background: $-c-info;
     box-shadow: $box-shadow;
+    @media screen and (max-width: 700px){
+      width: 95%;
+    }
   }
 }
 .answersWrap {
@@ -69,6 +82,9 @@ h1 {
   width: 80%;
   min-height: 208px;
   flex-direction: column;
+  @media screen and (max-width: 700px){
+    width: 95%;
+  }
 }
 .answer {
   display: none;
