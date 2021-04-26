@@ -39,9 +39,9 @@ body {
   flex-direction: column;
   @media screen and (max-width: 700px){
     padding: 0;
-    height: 100%;
-    width: 95%;
-    min-height: 95vh;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
   }
 }
 h1 {
@@ -95,10 +95,12 @@ h1 {
   font-size: 18px;
   line-height: 40px;
   box-shadow: $box-shadow;
-  cursor: pointer;
+  cursor: pointer;  
   &:hover,
   &:hover {
-    background: $-c-warning;
+    @media screen and (min-width: 701px){
+      background: $-c-warning;
+    }
   }
   &.correct {
     background: $-c-success;

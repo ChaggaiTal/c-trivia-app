@@ -7,6 +7,7 @@ const $questionWrap: HTMLDivElement = document.querySelector('.questionWrap');
 const $question: HTMLDivElement = document.querySelector('#question');
 const $answerWrap: HTMLDivElement = document.querySelector('.answersWrap');
 const $answers: any = document.querySelectorAll('.answer');
+const $correctAnswer: HTMLSpanElement = document.querySelector('#correctAnswer');
 const $title: HTMLElement = document.querySelector('.title');
 
 // Globals
@@ -16,6 +17,7 @@ let score = 0;
 
 const initGame = () => {
   questionIndex = 1;
+  score = 0;
   showHideQuestion('show');
   getQuestionsFromApi().then((response) => {
     $loader.style.display = 'none';
@@ -47,6 +49,7 @@ const setQuestion = () => {
   const answers = [...incorrect_answers, correct_answer];
   $title.innerHTML = `Question ${questionIndex} of 10`;
   $question.innerHTML = question;
+  $correctAnswer.innerHTML = correct_answer;
 
   // randomize answers order
   answers.sort(() => 0.5 - Math.random());
@@ -71,7 +74,7 @@ const checkAnswer = ({ target }) => {
   } else {
     $answers.forEach(($answer: HTMLDivElement) => {
       // Indicate correct answer
-      if ($answer.innerHTML === correct_answer) {
+      if ($answer.innerHTML === $correctAnswer.innerHTML) {
         $answer.classList.add('correct');
       }
     });

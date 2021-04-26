@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trivia</title>
-    <link rel="stylesheet" type="text/css" href="dist/styles/styles.css" />
-    <script src="dist/scripts.js" defer type="module"></script>
-  </head>
 
-  <body>
-    <div class="wrapper">
-      <h1 class="title">Trivia</h1>
-      <div class="questionWrap">
-        <div id="question" class="question"></div>
-      </div>
-      <button class="start">Click to start</button>
-      <div class="answersWrap">
-        <button class="answer">Answer 1</button>
-        <button class="answer">Answer 2</button>
-        <button class="answer">Answer 3</button>
-        <button class="answer">Answer 4</button>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trivia</title>
+  <link rel="stylesheet" type="text/css" href="dist/styles/styles.css" />
+  <script src="dist/scripts.js" defer type="module"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1 class="title">Trivia</h1>
+    <div class="questionWrap">
+      <div id="question" class="question"></div>
     </div>
-    <div class="loader">Loading...</div>
-  </body>
+    <button class="start">Click to start</button>
+    <div class="answersWrap">
+      <button class="answer"></button>
+      <button class="answer"></button>
+      <button class="answer"></button>
+      <button class="answer"></button>
+      <span style="display: none" id="correctAnswer"></span>
+    </div>
+  </div>
+  <div class="loader">Loading...</div>
+</body>
+
 </html>
