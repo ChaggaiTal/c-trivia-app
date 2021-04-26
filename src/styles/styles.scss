@@ -38,9 +38,9 @@ body {
   align-items: center;
   flex-direction: column;
   @media screen and (max-width: 700px){
-    padding: 0;
     width: 100vw;
     height: 100vh;
+    padding: 0;
     border-radius: 0;
   }
 }
@@ -111,6 +111,7 @@ h1 {
 }
 .start {
   display: block;
+  width: 100%;
   background: $-c-success;
   @extend .answer;
 }
@@ -126,4 +127,30 @@ h1 {
   font-size: 40px;
   justify-content: center;
   align-items: center;
+}
+
+// Forms
+.form-control {
+  margin-bottom: 15px;
+  label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+  }
+  select,
+  input {
+    display: block;
+    width: 100%;
+    height: 45px;
+    padding: 10px 15px;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    border: 1px solid #f1f1f1;
+    border-radius: 4px;
+    background-color: #ffffff;
+    background-image: none;
+    color: #464545;
+    font-size: 15px;
+    line-height: 1.42857143;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+  }
 }
